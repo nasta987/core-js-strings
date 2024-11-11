@@ -520,7 +520,7 @@ function encodeToRot13(str) {
   if (str == null) {
     return '';
   }
-  return str.replace(/[A-Za-z]/g, function (c) {
+  return str.replace(/[A-Za-z]/g, function rot13(c) {
     return String.fromCharCode(
       c.charCodeAt(0) + (c.toLowerCase() < 'n' ? 13 : -13)
     );
